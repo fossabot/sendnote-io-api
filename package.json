@@ -5,6 +5,7 @@
   "description": "Adonisjs boilerplate for API server with pre-configured JWT",
   "main": "index.js",
   "scripts": {
+    "start:dev": "npx adonis serve --dev",
     "start": "node server.js",
     "test": "node ace test",
     "mongo:start": "docker-compose -f docker-compose.dev.yml up --remove-orphans"
@@ -28,7 +29,9 @@
     "lucid-mongo": "^3.1.6",
     "mongodb-core": "^3.2.7"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@adonisjs/cli": "^4.0.12"
+  },
   "autoload": {
     "App": "./app"
   }
