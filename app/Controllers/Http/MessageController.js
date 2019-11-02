@@ -29,7 +29,16 @@ class MessageController {
     return obj;
   };
 
-  get = async ({params}) => await Message.get({id: params.id});
+
+  get = async ({params, response}) => {
+    const msg = await Message.where({_id: params.id}).fetch();
+
+    if (msg.rows.length != 0) {
+      return msg.toJSON();
+    } else {
+      return response.status(404).send({});
+    }
+  };
 }
 
 module.exports = MessageController;

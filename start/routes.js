@@ -21,5 +21,5 @@ Route.get('/', () => {
 })
 
 Route.get('/messages', 'MessageController.index');
-Route.post('/messages', 'MessageController.insert');
-Route.get('/messages/:id', 'MessageController.insert');
+Route.post('/messages', 'MessageController.insert').validator('MessagesValidator');
+Route.get('/messages/:id', 'MessageController.get');
