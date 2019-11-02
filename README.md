@@ -35,6 +35,5 @@ App will be binded to port http://127.0.0.1:3333, use 0.0.0.0 as host to listen 
 
 `docker run -dti --rm --name sendnote-api -p 3333:3333 netforce01/sendnote-io-api`
 
-
 ## License
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fnitrique%2Fsendnote-io-api.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fnitrique%2Fsendnote-io-api?ref=badge_large)
