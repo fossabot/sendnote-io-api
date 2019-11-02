@@ -42,3 +42,11 @@ test('Test not found on message', async({client}) => {
   const response = await client.get('/messages/lorem').end();
   response.assertStatus(404);
 })
+
+/**
+ * Case 4 - Deleting a not found message
+ */
+test('Removing a not found message', async({client}) => {
+  const response = await client.delete('/messages/lorem').end();
+  response.assertStatus(404);
+})
