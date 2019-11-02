@@ -39,6 +39,16 @@ class MessageController {
       return response.status(404).send({});
     }
   };
+
+  delete = async ({params, response}) => {
+    const msg = await Message.find(params.id);
+
+    if (msg) {
+      await msg.delete();
+    } else {
+      return response.status(404).send({});
+    }
+  };
 }
 
 module.exports = MessageController;
